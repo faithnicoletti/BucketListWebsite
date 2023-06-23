@@ -1,0 +1,15 @@
+<%- include('../partials/header') %>
+
+<h2>Edit Career Goal</h2>
+<form action="/careers/<%=career.id%>?_method=PUT" method="POST">
+  <label>Name:
+    <input type="text" name="name">
+  <label>Description:
+    <input type="text" name="description">
+  </label><br>
+  <label>Priority:
+    <input type="number" name="priority">
+  </label><br>
+  <button type="submit">Edit Career goal</button>
+</form>
+<%- include('../partials/footer') %>

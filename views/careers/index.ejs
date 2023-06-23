@@ -1,0 +1,13 @@
+<%- include('../partials/header') %>
+  <h2>All Careers</h2>
+  <a href="/careers/new">Create New Career Goal</a>
+  <ul>
+    <%careers.forEach((career)=>{%>
+      <li><a href="/careers/<%=career.id%>"><%=career.name%></a></li>
+      <!-- <button onclick="markAsCompleted('<%= career.id %>')">Mark as Completed</button> -->
+      <form action="/careers/<%=career.id%>?_method=DELETE" method="POST">
+        <input type="submit" value="x"/>
+      </form>
+    <%})%>
+  </ul>
+  <%- include('../partials/footer') %>

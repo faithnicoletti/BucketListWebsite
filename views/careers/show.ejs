@@ -1,0 +1,11 @@
+<%- include('../partials/header') %>
+
+<h2>Career Goal Details</h2>
+<p>Name: <%= career.name %></p>
+<p>Description: <%= career.description %></p>
+<p>Priority: <%= career.priority %></p>
+<p>Status: <%= career.completed ? 'Completed' : 'Not Completed' %></p>
+<a href="/careers/edit/<%= career.id %>">Edit</a><br>
+<a href="/careers/<%= career.id %>/complete">Mark as Complete</a>
+<%- include('../partials/footer') %>
+<!-- <a href="/careers/comments<%= career.id%>">Mark Complete</a> -->

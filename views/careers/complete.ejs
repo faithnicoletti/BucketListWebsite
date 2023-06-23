@@ -1,0 +1,15 @@
+<%- include('../partials/header') %>
+
+<h2>Congratulations on Completion!</h2>
+  <form action="/complete/<%= career.id %>/comments" method="POST">
+  <label>Name:
+    <input type="text" name="name">
+  <label>Description:
+    <input type="text" name="description">
+  </label><br>
+  <label for="comments">Comments/Thoughts:</label>
+  <textarea name="comments" id="comments" rows="4" cols="50"></textarea>
+  <br>
+  <button type="submit">Submit Comments</button>
+</form>
+<%- include('../partials/footer') %>
